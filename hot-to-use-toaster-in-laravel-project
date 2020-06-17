@@ -1,0 +1,39 @@
+How to use toastr in laravel project?
+
+Step-01: Google search - toastr cdn link.
+Step-02: Copy two link:
+        Link1: https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css
+        Link2: https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js
+Step-03: Copy and paste below code in laravel master layout file:
+         @if(Session::has('messege'))
+        <script>
+          var type = "{{ Session::get('alert-type','info') }}";
+          switch(type){
+            case 'info':
+              toastr.info("{{ Session::get('messege') }}");
+              break;
+            case 'success':
+              toastr.success("{{ Session::get('messege') }}");
+              break; 
+            case 'warning':
+              toastr.warning("{{ Session::get('messege') }}");
+              break;       
+          }
+        </script>
+ Step-04: Copy and paste below code into your controller if success or failed testes: 
+        if($insert){
+            $notification=array(
+                'messege'=>'Successfully Data Inserted!',
+                'alert-type'=>'warning'
+            );
+            return Redirect()->back()->with($notification);
+        }else{
+           
+            $notification=array(
+                'messege'=>'Something went wron!',
+                'alert-type'=>'warning'
+            );
+            return Redirect()->back()->with($notification);
+        }
+        
+ Step-5: Now enjoy and done.       
