@@ -4,7 +4,7 @@ Step-01: Google search - toastr cdn link.
 Step-02: Copy two link:
         Link1: https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css
         Link2: https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js
-Step-03: Copy and paste below code in laravel master layout file:
+Step-03: Copy and paste below code in laravel master layout file at the below after end <body> tag:
          @if(Session::has('messege'))
         <script>
           var type = "{{ Session::get('alert-type','info') }}";
