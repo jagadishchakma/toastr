@@ -23,6 +23,7 @@ Step-03: Copy and paste below code in laravel master layout file at the below af
               break;   
           }
         </script>
+       @endif 
  Step-04: Copy and paste below code into your controller if success or failed testes: 
         if($insert){
             $notification=array(
