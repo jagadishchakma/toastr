@@ -40,4 +40,7 @@ Step-03: Copy and paste below code in laravel master layout file at the below af
             return Redirect()->back()->with($notification);
         }
         
- Step-5: Now enjoy and done.       
+ Step-5: Now enjoy and done.     
+ 
+ Step-06: All Problem Solution Here
+          Link: https://stackoverflow.com/questions/51809850/toastr-not-showing-up-in-laravel-5-4
